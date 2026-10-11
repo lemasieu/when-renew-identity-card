@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ước tính tuổi đổi căn cước</title>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>🪪 Ước tính tuổi đổi căn cước</h1>
+    <p class="subtitle">Nhập ngày sinh hoặc năm sinh để biết khi nào bạn cần đổi thẻ Căn cước</p>
+  </header>
+
+  <main class="container">
+    <!-- Ô nhập ngày sinh -->
+    <section class="input-section">
+      <div class="input-box">
+        <label for="birthDate">Ngày sinh của bạn</label>
+
+        <!-- Toggle chế độ nhập -->
+        <div class="mode-toggle">
+          <label class="toggle-option">
+            <input type="radio" name="birthMode" value="full" checked>
+            <span>Biết chính xác ngày sinh</span>
+          </label>
+          <label class="toggle-option">
+            <input type="radio" name="birthMode" value="year">
+            <span>Chỉ biết năm sinh</span>
+          </label>
+        </div>
+
+        <div class="input-row">
+          <input type="date" id="birthDate" autocomplete="off">
+          <input type="number" id="birthYear" class="hidden" placeholder="Ví dụ: 1995" min="1900" max="2100" autocomplete="off">
+          <button id="calcBtn">Tính toán</button>
+        </div>
+      </div>
+      <p class="hint">
+        Theo Điều 21 Luật Căn cước 2023, công dân phải đổi thẻ khi đủ
+        <strong>14, 25, 40 và 60 tuổi</strong>. Bạn có thể làm thủ tục
+        <strong>trong vòng 2 năm trước</strong> mốc tuổi (kể cả mốc 14 tuổi) và thẻ vẫn có giá trị đến mốc tiếp theo.
+        Nhập <strong>ngày sinh chính xác</strong> để biết thời điểm đổi thẻ theo từng ngày.
+      </p>
+    </section>
+
+    <!-- Kết quả -->
+    <section id="resultSection" class="result-section hidden">
+      <div id="resultCard" class="result-card"></div>
+    </section>
+
+    <!-- Bảng mốc tuổi -->
+    <section class="table-section">
+      <h2>📋 Bảng mốc tuổi đổi căn cước</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Mốc tuổi</th>
+              <th>Ý nghĩa</th>
+              <th>Thời gian nên đổi</th>
+              <th id="birthYearHeader">Năm sinh cần đổi</th>
+            </tr>
+          </thead>
+          <tbody id="milestoneTableBody">
+            <!-- Nội dung sẽ được render tự động bằng JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Lưu ý -->
+    <section class="note-section">
+      <h2>⚠️ Lưu ý quan trọng</h2>
+      <ul>
+        <li>
+          <strong>Ngoại lệ 2 năm:</strong> Nếu bạn làm thẻ Căn cước trong vòng 2 năm trước mốc tuổi phải đổi
+          (ví dụ: sinh 31/12/2002, thời điểm đổi cho mốc 25 tuổi là 31/12/2025 – 31/12/2027),
+          thẻ đó vẫn có giá trị sử dụng đến mốc tuổi tiếp theo — bạn không cần đổi lại khi đến mốc tuổi đó nữa.
+        </li>
+        <li>
+          <strong>Chỉ cần biết năm sinh cũng đủ:</strong> Nếu không nhớ chính xác ngày/tháng, bạn có thể chỉ nhập
+          năm sinh — kết quả ước tính theo năm vẫn đủ chính xác do có thời điểm 2 năm.
+        </li>
+        <li>
+          <strong>Thẻ có giá trị vĩnh viễn:</strong> Người từ 60 tuổi trở lên (đã đổi thẻ ở mốc 60) không
+          cần đổi thẻ thêm lần nào nữa.
+        </li>
+        <li>
+          <strong>Không đổi đúng hạn:</strong> Có thể bị phạt hành chính từ
+          <strong>300.000 – 500.000 đồng</strong> và tạm dừng giao dịch ngân hàng.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Dữ liệu tham khảo theo Luật Căn cước 2023. Trang web không lưu trữ thông tin người dùng.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
