@@ -64,7 +64,7 @@ when-renew-identity-card/
 **2-Year Grace Period:**
 
 If a card is issued, renewed, or reissued within **2 years before** a renewal age, it remains valid until the next renewal age. For example:
-- A citizen who renews their card at age **38** (within 2 years before 40) will have a card valid until age **60**, skipping the age-40 renewa-.
+- A citizen who renews their card at age **38** (within 2 years before 40) will have a card valid until age **60**, skipping the age-40 renewal.
 
 **Important Notes:**
 
